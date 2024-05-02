@@ -2,12 +2,12 @@
 	
 	function cargarControlador($controlador){		
 		$nombreControlador = ucwords($controlador)."Controller";
-		$archivoControlador = 'controllers/'.ucwords($controlador).'.php';
+		$urlArchivoControlador = 'controllers/'.ucwords($controlador).'.php';
 		
-		if(!is_file($archivoControlador)){			
-			$archivoControlador= 'controllers/'.CONTROLADOR_PRINCIPAL.'.php';
+		if(!is_file($urlArchivoControlador)){			
+			$urlArchivoControlador= 'controllers/'.CONTROLADOR_PRINCIPAL.'.php';
 		}
-		require_once $archivoControlador;
+		require_once $urlArchivoControlador;
 		$control = new $nombreControlador();
 		return $control;
 	}
