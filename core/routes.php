@@ -1,7 +1,6 @@
 <?php
 	
-	function cargarControlador($controlador){
-		
+	function cargarControlador($controlador){		
 		$nombreControlador = ucwords($controlador)."Controller";
 		$archivoControlador = 'controllers/'.ucwords($controlador).'.php';
 		

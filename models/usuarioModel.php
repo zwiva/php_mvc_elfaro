@@ -1,20 +1,20 @@
 <?php
 
-class RegistroModel
+class UsuarioModel
 {
-	private $db;
-	private $registros;
+    private $db;
+    private $registros;
 
-	private $nombre;
-	private $rut;
-	private $email;
-	private $fono;
+    private $nombre;
+    private $rut;
+    private $email;
+    private $fono;
 
-	public function __construct()
-	{
-		$this->db = Conectar::conexion();
-		$this->registros = array();
-	}
+    public function __construct()
+    {
+        $this->db = Conectar::conexion();
+        $this->registros = array();
+    }
 
     function setNombre($nombre)
     {
@@ -56,10 +56,8 @@ class RegistroModel
         return $this->fono;
     }
 
-	public function insertar($nombre, $rut, $email, $fono)
-	{
-		$resultado = $this->db->query("INSERT INTO usuarios (nombre, rut, email, fono) VALUES ('$nombre', '$rut', '$email', '$fono')");
-	}
-
-
+    public function insertar($nombre, $rut, $email, $fono)
+    {
+        $resultado = $this->db->query("INSERT INTO usuarios (nombre, rut, email, fono) VALUES ('$nombre', '$rut', '$email', '$fono')");
+    }
 }

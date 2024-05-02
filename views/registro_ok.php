@@ -12,7 +12,7 @@
     <?php require_once 'shared/navbar.php' ?>
 
     <div style="text-align: center;">
-        
+
         <div class="m-5">
             <h2 class="is-size-4 has-text-primary has-text-weight-bold">Registro exitoso</h2>
         </div>

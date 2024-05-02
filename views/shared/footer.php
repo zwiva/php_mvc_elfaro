@@ -1,7 +1,6 @@
     <!-- footer -->
     <footer class="has-background-primary">
         <div style="display: flex; width: 100%; max-width: 1000px; justify-content: center; align-content: flex-start;">
-
             <div class="is-flex" style="justify-content: end; align-self: center; width: 30%;">
                 <a href="">
                     <img src="https://i.pinimg.com/736x/db/c2/24/dbc224e90d7b2db5d4ee6e828434226e.jpg" style="height: 70px; border-radius: 100%;">
@@ -13,8 +12,8 @@
                 </div>
                 <div class="is-flex is-flex-wrap-wrap">
                     <div class="is-flex is-flex-direction-column mx-3">
-                        <a href="index.php?c=main&a=nuevocontacto">Contacto</a>
-                        <a href="index.php?c=main&a=nuevoregistro">Regístrese</a>
+                        <a href="index.php?c=contacto&a=nuevocontacto">Contacto</a>
+                        <a href="index.php?c=registro&a=nuevoregistrousuario">Regístrese</a>
                         <a href="">Editoria</a>
                         <a href="">Clasificador</a>
                         <a href="">Espectáculos</a>
@@ -70,8 +69,5 @@
     </footer>
 
     </body>
-
-
-
 
     </html>

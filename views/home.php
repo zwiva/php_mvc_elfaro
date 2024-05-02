@@ -33,8 +33,8 @@
             <a class="has-text-primary m-1" href="#gral">Noticias</a>
             <a class="has-text-primary m-1" href="#sprt">Deportes</a>
             <a class="has-text-primary m-1" href="#bsn">Negocios</a>
-            <a class="has-text-primary m-1" href="index.php?c=main&a=nuevocontacto">Contacto</a>
-            <a class="has-text-primary m-1" href="index.php?c=main&a=nuevoregistro">Regístrese</a>
+            <a class="has-text-primary m-1" href="index.php?c=contacto&a=nuevocontacto">Contacto</a>
+            <a class="has-text-primary m-1" href="index.php?c=usuario&a=nuevoregistrousuario">Regístrese</a>
         </div>
     </section>
 

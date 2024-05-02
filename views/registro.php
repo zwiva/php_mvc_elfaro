@@ -19,7 +19,7 @@
 
         <p class="m-3">Este formulario es para registrarse en el sistema y acceder a secciones exclusivas.</p>
 
-        <form name="register" style="margin-bottom: 1em;" action="index.php?c=main&a=guardaregistro" method="post">
+        <form name="register" style="margin-bottom: 1em;" action="index.php?c=usuario&a=guardaregistrousuario" method="post">
             <div class="m-3">
                 <label for="clientname">Nombre completo: </label>
                 <input type="text" name="clientname" autofocus required id="clientname" style="width:100%;">

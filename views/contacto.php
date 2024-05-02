@@ -19,7 +19,7 @@
             <h2 class="is-size-4 has-text-primary has-text-weight-bold">Contáctese con nosotros</h2>
         </div>
 
-        <form style="margin-bottom: 1em;" action="index.php?c=main&a=guardacontacto" method="post">
+        <form style="margin-bottom: 1em;" action="index.php?c=contacto&a=guardacontacto" method="post">
             <div class="m-3">
                 <label for="clientname">Su nombre: </label>
                 <input type="text" name="clientname" autofocus required id="clientname" style="width:100%;">
