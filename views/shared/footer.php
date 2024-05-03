@@ -13,7 +13,7 @@
                 <div class="is-flex is-flex-wrap-wrap">
                     <div class="is-flex is-flex-direction-column mx-3">
                         <a href="index.php?c=contacto&a=nuevocontacto">Contacto</a>
-                        <a href="index.php?c=registro&a=nuevoregistrousuario">Regístrese</a>
+                        <a href="index.php?c=usuario&a=nuevoregistrousuario">Regístrese</a>
                         <a href="">Editoria</a>
                         <a href="">Clasificador</a>
                         <a href="">Espectáculos</a>
