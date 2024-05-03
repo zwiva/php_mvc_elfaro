@@ -4,6 +4,7 @@ class ArticuloModel
 {
     private $db;
     private $articulos;
+    private $usuario;
     private $categoria;
     private $titulo;
     private $descripcion;
@@ -12,6 +13,16 @@ class ArticuloModel
     {
         $this->db = Conectar::conexion();
         $this->articulos = array();
+    }
+
+    function setUsuario($usuario)
+    {
+        $this->usuario = $usuario;
+    }
+
+    function getusuario()
+    {
+        return $this->usuario;
     }
 
     function setCategoria($categoria)
@@ -44,8 +55,4 @@ class ArticuloModel
         return $this->descripcion;
     }
 
-    public function insertar($categoria, $titulo, $descripcion)
-    {
-        $resultado = $this->db->query("INSERT INTO articulos (categoria, email, descripcion) VALUES ('$categoria', '$titulo', '$descripcion')");
-    }
 }

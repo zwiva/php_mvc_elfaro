@@ -1,6 +1,6 @@
 <?php
 
-class UsuarioController // principal
+class UsuarioController
 {
 
 	public function __construct()
