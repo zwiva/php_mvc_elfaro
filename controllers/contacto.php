@@ -6,6 +6,7 @@ class ContactoController
 	public function __construct()
 	{
 		require_once "models/contactoModel.php";
+		require_once "config/database.php";
 	}
 
 	public function nuevocontacto()
@@ -18,15 +19,21 @@ class ContactoController
 		require_once "views/registro_ok.php";
 	}
 
-	public function guardacontacto()
+	public function getContactos()
+	{
+		$contactos = new Conectar();
+		$contactos->readContactos();
+		require_once "views/contactos.php";
+	}
+
+	public function guardacontacto() // ok
 	{
 		$nombre = $_POST['clientname'];
 		$email = $_POST['clientemail'];
 		$mensaje = $_POST['clientmsg'];
 
-		$contacto = new contactoModel();
-		$contacto->insertar($nombre, $email, $mensaje);
+		$contacto = new Conectar();
+		$contacto->createContacto($nombre, $email, $mensaje);
 		$this->registro_ok();
 	}
-
 }

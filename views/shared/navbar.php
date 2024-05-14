@@ -14,8 +14,8 @@
             </p>
             <ul class="banner__menu--items has-text-primary">
                 <li class="has-text-weight-bold m-1" style="list-style-type: none;"> <a class="has-text-primary" href="index.php">Inicio</a> </li>
-                <li class="has-text-weight-bold m-1" style="list-style-type: none;"> <a class="has-text-primary" href="#sprt"> Deporte</a></li>
-                <li class="has-text-weight-bold m-1" style="list-style-type: none;"> <a class="has-text-primary" href="#bsn"> Negocios</a></li>
+                <li class="has-text-weight-bold m-1" style="list-style-type: none;"> <a class="has-text-primary" href="index.php?c=contacto&a=getContactos"> Contactos </a></li>
+                <li class="has-text-weight-bold m-1" style="list-style-type: none;"> <a class="has-text-primary" href="index.php?c=usuario&a=getUsuarios"> Usuarios </a></li>
             </ul>
         </div>
     </div>

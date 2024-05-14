@@ -11,7 +11,7 @@ class ArticuloModel
 
     public function __construct()
     {
-        $this->db = Conectar::conexion();
+        // $this->db = Conectar::conexion();
         $this->articulos = array();
     }
 

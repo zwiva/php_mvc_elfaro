@@ -2,7 +2,7 @@
 
 class ContactoModel
 {
-    private $db;
+    private $conexion;
     private $contactos;
     private $nombre;
     private $email;
@@ -10,7 +10,8 @@ class ContactoModel
 
     public function __construct()
     {
-        $this->db = Conectar::conexion();
+        // $this->db;
+   
         $this->contactos = array();
     }
 
@@ -44,8 +45,4 @@ class ContactoModel
         return $this->mensaje;
     }
 
-    public function insertar($nombre, $email, $mensaje)
-    {
-        $resultado = $this->db->query("INSERT INTO contactos (nombre, email, mensaje) VALUES ('$nombre', '$email', '$mensaje')");
-    }
 }

@@ -12,7 +12,7 @@ class UsuarioModel
 
     public function __construct()
     {
-        $this->db = Conectar::conexion();
+        // $this->db = Conectar::conexion();
         $this->registros = array();
     }
 
@@ -56,8 +56,8 @@ class UsuarioModel
         return $this->fono;
     }
 
-    public function insertar($nombre, $rut, $email, $fono)
-    {
-        $resultado = $this->db->query("INSERT INTO usuarios (nombre, rut, email, fono) VALUES ('$nombre', '$rut', '$email', '$fono')");
-    }
+    // public function insertar($nombre, $rut, $email, $fono) // en database
+    // {
+    //     $resultado = $this->db->query("INSERT INTO usuarios (nombre, rut, email, fono) VALUES ('$nombre', '$rut', '$email', '$fono')");
+    // }
 }
