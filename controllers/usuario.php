@@ -2,13 +2,13 @@
 
 class UsuarioController
 {
-	private $usuariosArr;
+	private $usuarios;
 
 	public function __construct()
 	{
-		$this->usuariosArr = array();
-		require_once "models/usuarioModel.php";
 		require_once "config/database.php";
+		require_once "models/usuarioModel.php";
+		$this->usuarios = array();
 	}
 
 	public function nuevoregistrousuario()
@@ -20,17 +20,17 @@ class UsuarioController
 	{
 		require_once "views/registro_ok.php";
 	}
-	
+
 	public function getUsuarios()
 	{
-		$usuarios = new Conectar();
-		$resultado = $usuarios->readUsuarios();
-
-		while ($row = $resultado->fetch_assoc()) {
-			$this->usuariosArr[] = $row;
+		$model = new UsuarioModel();
+		$resultado = $model->readUsuarios();
+			
+		while ($row = $resultado->fetchAll()) {
+			$this->usuarios = $row;
 		}
-		
-		$data["usuarios"] = $this->usuariosArr;
+
+		$data["usuarios"] = $this->usuarios;
 		require_once "views/usuarios.php";
 	}
 
@@ -41,26 +41,31 @@ class UsuarioController
 		$rut = $_POST['clientrut'];
 		$fono = $_POST['clientfono'];
 
-		$usuario = new Conectar();
+		$usuario = new UsuarioModel();
 		$usuario->createUsuario($nombre, $email, $rut, $fono);
 		$this->registro_ok();
 	}
 
-	public function editarUsuario()
+	public function editarUsuario() // pendiente
 	{
-		// $nombre = $_POST['clientname'];
-		// $email = $_POST['clientemail'];
-		// $rut = $_POST['clientrut'];
-		// $fono = $_POST['clientfono'];
+		$nombre = $_POST['clientname'];
+		$email = $_POST['clientemail'];
+		$rut = $_POST['clientrut'];
+		$fono = $_POST['clientfono'];
+		$idusuario = $_POST['id'];
 
-		// $usuario = new Conectar();
-		// $usuario->createUsuario($nombre, $email, $rut, $fono);
-		// $this->registro_ok();
+		// $usuario = new UsuarioModel();
+		// $usuario->updateUsuario($idusuario, $nombre, $email, $rut, $fono);
+		// require_once "views/registro.php";
 	}
 
 
-	public function eliminarUsuario() {
-		
-	}
+	public function eliminarUsuario() // pendiente
+	{
+		$idusuario = $_POST['id'];
 
+		// $usuario = new UsuarioModel();
+		// $usuario->deleteUsuario($idusuario);
+		// require_once "views/usuarios.php";
+	}
 }

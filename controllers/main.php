@@ -11,8 +11,8 @@ class MainController // principal
 
 	public function index()
 	{
-		$contactos = new Conectar();
-		$data["contactos"] = $contactos->readContactos();
+		// $contactos = new Conectar2();
+		// $data["contactos"] = $contactos->readContactos();
 		require_once "views/home.php";
 	}
 

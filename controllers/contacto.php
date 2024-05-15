@@ -2,6 +2,7 @@
 
 class ContactoController
 {
+	private $contactos;
 
 	public function __construct()
 	{
@@ -21,8 +22,14 @@ class ContactoController
 
 	public function getContactos()
 	{
-		$contactos = new Conectar();
-		$contactos->readContactos();
+		$contactos = new ContactoModel();
+		$resultado = $contactos->readContactos();
+
+		while ($row = $resultado->fetchAll()) {
+			$this->contactos = $row;
+		}
+
+		$data["contactos"] = $this->contactos;
 		require_once "views/contactos.php";
 	}
 
@@ -32,7 +39,7 @@ class ContactoController
 		$email = $_POST['clientemail'];
 		$mensaje = $_POST['clientmsg'];
 
-		$contacto = new Conectar();
+		$contacto = new ContactoModel();
 		$contacto->createContacto($nombre, $email, $mensaje);
 		$this->registro_ok();
 	}

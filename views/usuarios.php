@@ -16,33 +16,33 @@
             <h2 class="is-size-4 has-text-primary has-text-weight-bold">Usuarios</h2>
         </div>
 
-        <p class="m-3">Usuarios registrados:</p>
-        <table>
+        <p class="my-5">Usuarios registrados:</p>
 
+        <table>
             <thead>
                 <tr>
-                    <th>Nombre</th>
-                    <th>Rut</th>
-                    <th>Email</th>
-                    <th>Fono</th>
+                    <th class="p-1">Nombre completo</th>
+                    <th class="p-1">Rut</th>
+                    <th class="p-1">Email</th>
+                    <th class="p-1">Fono</th>
+                    <th class="p-1">Acciones</th>
                 </tr>
             </thead>
             <tbody>
-
                 <?php foreach ($data["usuarios"] as $usuario) : ?>
                     <tr>
-                        <td class="p-1"><?php echo $usuario["nombre"] ?></td>
-                        <td class="p-1"><?php echo $usuario["rut"] ?></td>
-                        <td class="p-1"><?php echo $usuario["email"] ?></td>
-                        <td class="p-1"><?php echo $usuario["fono"] ?></td>
-                        <td class="p-1"><?php echo $usuario["id_usuario"] ?></td>
-                        <td class="p-1"><a href='index.php?c=usuario&a=updateUsuario&id="<?= $usuario['id'] ?>"' class="button is-warning">Modificar</a></td>
-                        <td class="p-1"><a href='index.php?c=usuario&a=eliminar&id="<?= $usuario['id'] ?>"' class='button is-danger'>Eliminar</a></td>
+                        <td class="p-1"><?= $usuario["nombre"] ?></td>
+                        <td class="p-1"><?= $usuario["rut"] ?></td>
+                        <td class="p-1"><?= $usuario["email"] ?></td>
+                        <td class="p-1"><?= $usuario["fono"] ?></td>
+                        <!-- <td class="p-1"><?= $usuario["id_usuario"] ?></td> -->
+                        <td class="p-1"><a href='index.php?c=usuario&a=updateUsuario&id="<?= $usuario['id'] ?>"' class="button is-warning" disabled>Modificar</a></td>
+                        <td class="p-1"><a href='index.php?c=usuario&a=eliminar&id="<?= $usuario['id'] ?>"' class='button is-danger' disabled>Eliminar</a></td>
                     </tr>
                 <?php endforeach; ?>
-
             </tbody>
         </table>
+
     </div>
 
     <?php require_once 'shared/footer.php' ?>
