@@ -14,42 +14,34 @@ class UsuarioModel
         require_once "config/database.php";
         $this->registros = array();
     }
-
     function setNombre($nombre)
     {
         $this->nombre = $nombre;
     }
-
     function getNombre()
     {
         return $this->nombre;
     }
-
     function setrut($rut)
     {
         $this->rut = $rut;
     }
-
     function getrut()
     {
         return $this->rut;
     }
-
     function setEmail($email)
     {
         $this->email = $email;
     }
-
     function getEmail()
     {
         return $this->email;
     }
-
     function setFono($fono)
     {
         $this->fono = $fono;
     }
-
     function getfono()
     {
         return $this->fono;
@@ -57,6 +49,13 @@ class UsuarioModel
 
     public function createUsuario($nombre, $rut, $email, $fono)
     {
+        // sin preparar:
+        // $sql = "INSERT INTO usuarios (nombre, rut, email, fono) VALUES ('$nombre', '$rut', '$email', '$fono')";
+        // $newconnection = new Conectar();
+        // $connection = $newconnection->conexion()->exec($sql);
+        // $connection = null;
+
+        // preparada:
         $sql = "INSERT INTO usuarios (nombre, rut, email, fono) VALUES (:nombre, :rut, :email, :fono)";
         $newconnection = new Conectar();
         $connection = $newconnection->conexion()->prepare($sql);

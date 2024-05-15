@@ -47,9 +47,9 @@ class ContactoModel
     public function createContacto($nombre, $email, $mensaje)
     {
         $this->connection = new Conectar();
-        // $newconnection = $this->connection->establecerConexion();
+        $newconnection = $this->connection->establecerConexion();
         
-        // $sql = "INSERT INTO contactos (nombre, email, mensaje) VALUES (?, ?, ?)";
+        // $sql = "INSERT INTO contactos (nombre, email, mensaje) VALUES ($nombre, $email, $mensaje)"; // sin preparar
 
         // $stmt = $newconnection->prepare($sql);
         // $stmt->bind_param("sss", $nombre, $email, $mensaje);

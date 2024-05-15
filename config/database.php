@@ -33,3 +33,15 @@ class Conectar
 		return $connection;
 	}
 }
+
+
+// DELIMITER $$
+
+// CREATE PROCEDURE agregarUsuario(IN _nombre VARCHAR(50), IN _rut VARCHAR(10), IN _email VARCHAR(50), IN _fono VARCHAR(10))
+// BEGIN
+//    INSERT INTO usuarios (nombre, rut, email, fono) VALUES (_nombre, _rut, _email, _fono);
+// END$$
+
+// DELIMITER $$
+
+// CALL agregarUsuario("andreitaaa","1234567890","correo@correo.cl","1234567890");
