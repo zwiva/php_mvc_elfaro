@@ -12,6 +12,17 @@
 
     <?php require_once 'shared/navbar.php' ?>
 
+    <!-- menu secciones -->
+    <section style="display:flex; width: 100%; justify-content:center;">
+        <div style="display: flex; flex-wrap:wrap; align-items:center; width: 100%; max-width: 1000px; border: 1px solid var(--bulma-primary); background-color: var(--bulma-primary);">
+            <a class="m-0 button is-primary is-small is-responsive" href="#gral">Noticias</a>
+            <a class="m-0 button is-primary is-small is-responsive" href="#sprt">Deportes</a>
+            <a class="m-0 button is-primary is-small is-responsive" href="#bsn">Negocios</a>
+            <a class="m-0 button is-primary is-small is-responsive" href="index.php?c=contacto&a=nuevocontacto">Contáctenos</a>
+            <a class="m-0 button is-primary is-small is-responsive" href="index.php?c=usuario&a=nuevoregistrousuario">Regístrese</a>
+        </div>
+    </section>
+
     <!-- banner publicidad -->
     <section class="is-flex is-justify-content-center" style="width: 100%; min-height: 60px; background-color: #282828;">
         <div class="is-flex is-justify-content-space-between" style="width: 100%; max-width: 1000px; border: 1px solid rgb(93, 93, 93);">
@@ -27,26 +38,9 @@
         </div>
     </header>
 
-    <!-- menu secciones -->
-    <section style="display:flex; width: 100%; justify-content:center; min-height: 60px;">
-        <div class="is-flex is-flex-wrap-wrap" style="width: 100%; max-width: 1000px; justify-content: space-around; border-top: 1px solid var(--bulma-primary);">
-            <a class="has-text-primary m-1" href="#gral">Noticias</a>
-            <a class="has-text-primary m-1" href="#sprt">Deportes</a>
-            <a class="has-text-primary m-1" href="#bsn">Negocios</a>
-            <a class="has-text-primary m-1" href="index.php?c=contacto&a=nuevocontacto">Contacto</a>
-            <a class="has-text-primary m-1" href="index.php?c=usuario&a=nuevoregistrousuario">Regístrese</a>
-        </div>
-    </section>
-
     <!-- noticias -->
     <main>
-        <!-- Agregar noticia -->
-        <div class="main__btn-add m-5">
-            <button onclick="showFormAddArticle()" class="button is-primary">+ Agregar noticia</button>
-            <div class="m-2 has-text-light">
-                <span id="numall" style="margin: 0 0.5em;"></span> artículos en total.
-            </div>
-        </div>
+
         <!-- formulario nueva noticia -->
         <div class="main__add-article" id="creator" style="margin:1em"></div>
 
@@ -146,9 +140,9 @@
             </div>
 
             <!-- Seccion generales -->
-            <h2 class="is-size-3 has-text-white has-text-weight-bold" id="gral">Noticias</h2>
+            <h2 class="is-size-3 has-text-white has-text-weight-bold has-text-primary" id="gral">Noticias</h2>
             <h6 class="has-text-light m-1"><span id="numgeneral"></span> artículos</h6>
-            <div class="main__section box has-background-black">
+            <div class="main__section box has-background-primary-dark">
                 <section class="section__body" id="grlsection">
                     <h2 class="m-2 is-size-5 has-text-weight-bold has-text-light">+ Visto</h2>
                     <!-- Noticia 1 -->
@@ -302,9 +296,9 @@
             </div>
             <hr>
             <!-- Seccion deportes -->
-            <h2 class="is-size-3 has-text-white has-text-weight-bold" id="sprt">Deportes</h2>
+            <h2 class="is-size-3 has-text-white has-text-weight-bold has-text-info" id="sprt">Deportes</h2>
             <h6 class="has-text-light m-1"><span id="numsports"></span> artículos</h6>
-            <div class="main__section box has-background-black">
+            <div class="main__section box has-background-info-dark">
                 <section class="section__body" id="sprsection">
                     <h2 class="m-2 is-size-5 has-text-weight-bold has-text-light">+ Visto</h2>
                     <!-- Noticia 1 -->
@@ -447,9 +441,9 @@
             </div>
             <hr>
             <!-- Seccion negocios -->
-            <h2 class="is-size-3 has-text-white has-text-weight-bold" id="bsn">Negocios</h2>
+            <h2 class="is-size-3 has-text-white has-text-weight-bold has-text-info" id="bsn">Negocios</h2>
             <h6 class="has-text-light m-1"><span id="numbusiness"></span> artículos</h6>
-            <div class="main__section box has-background-black">
+            <div class="main__section box has-background-info-dark">
                 <section class="section__body" id="bsnsection">
                     <h2 class="m-2 is-size-5 has-text-weight-bold has-text-light">+ Visto</h2>
                     <!-- Noticia 3 -->

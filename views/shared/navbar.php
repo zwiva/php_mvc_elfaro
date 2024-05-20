@@ -13,9 +13,17 @@
                 <span id="date"></span>&nbsp;-&nbsp;<span id="time"></span>&nbsp;
             </p>
             <ul class="banner__menu--items has-text-primary">
-                <li class="has-text-weight-bold m-1" style="list-style-type: none;"> <a class="has-text-primary" href="index.php">Inicio</a> </li>
-                <li class="has-text-weight-bold m-1" style="list-style-type: none;"> <a class="has-text-primary" href="index.php?c=contacto&a=getContactos"> Contactos </a></li>
-                <li class="has-text-weight-bold m-1" style="list-style-type: none;"> <a class="has-text-primary" href="index.php?c=usuario&a=getUsuarios"> Usuarios </a></li>
+                <!-- <li class="has-text-weight-bold m-1" style="list-style-type: none;"> <a class="has-text-primary" href="index.php">Inicio</a> </li> -->
+                <li class="has-text-weight-bold m-1" style="list-style-type: none;">
+                    <a class="has-text-primary is-text-bold" href="index.php?c=contacto&a=getContactos"> Contactos </a>
+                </li>
+                <li class="has-text-weight-bold m-1" style="list-style-type: none;">
+                    <a class="has-text-primary is-text-bold" href="index.php?c=usuario&a=getUsuarios"> Usuarios </a>
+                </li>
+                <li class="has-text-weight-bold m-1" style="list-style-type: none;">
+                    <a class="has-text-primary is-text-bold" href="index.php?c=articulo&a=nuevoarticulo"> Crear artículo </a>
+                </li>
+
             </ul>
         </div>
     </div>

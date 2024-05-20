@@ -30,7 +30,7 @@
             </div>
             <div class="m-3">
                 <label for="clientmsg">Mensaje: </label>
-                <input type="text" name="clientmsg" required id="clientmsg" style="width:100%;">
+                <textarea type="text" name="clientmsg" required id="clientmsg" style="width:100%; min-height: 150px;"></textarea>
             </div>
             <div class="is-flex is-justify-content-center m-3">
                 <input id="btn" type="submit" class="button is-primary" />
